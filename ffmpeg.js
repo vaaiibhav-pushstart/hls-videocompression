@@ -3,8 +3,8 @@ const ffmpegInstaller = require("@ffmpeg-installer/ffmpeg");
 
 ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
-console.log(`${__dirname}\video.mp4 :`, `${__dirname}\video.mp4`);
-ffmpeg(`${__dirname}\video.mp4`, { timeout: 432000 })
+console.log(`${__dirname}//video2.mp4 :`, `${__dirname}//video2.mp4`);
+ffmpeg(`${__dirname}//video2.mp4`, { timeout: 432000 })
   .addOptions([
     "-profile:v baseline",
     "-level 3.0",
@@ -13,7 +13,7 @@ ffmpeg(`${__dirname}\video.mp4`, { timeout: 432000 })
     "-hls_list_size 0",
     "-f hls",
   ])
-  .output("videos/output.m3u8")
+  .output("videos/output2.m3u8")
   .on("end", () => {
     console.log("end");
   })
